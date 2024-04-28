@@ -37,9 +37,9 @@
 <body>
     <div class="container">
         <h1>Um Pedido de Namoro Especial</h1>
-        <p>oi meu guaxinim pensei um pouco ❤️,</p>
-        <p>Eu cheguei tarde demais para ser o seu primeiro amor, mas, porfavor, me deixa ser o último</p>
-        <p>Você aceita ser minha mocila ate o fim da vida?</p>
+        <p>Olá amor ❤️,</p>
+        <p>Quero dizer que você ilumina minha vida como ninguém mais.</p>
+        <p>Você aceita namorar comigo?</p>
         <p class="heart" onclick="mostrarResposta()">❤️</p>
         <button id="nao" onmouseover="mudarPosicao()">Não</button>
         <p id="resposta" style="display: none;"></p>
@@ -47,7 +47,14 @@
     <script>
         function mostrarResposta() {
             document.getElementById('resposta').style.display = 'block';
-            document.getElementById('resposta').innerHTML = 'Sim! Eu aceito ❤️';
+            document.getElementById('resposta').innerHTML = 'Sim! Eu aceito, meu amor. ❤️';
+            const link = document.createElement('a');
+            link.href = 'https://wa.me/qr/W3STQYITRO4UK1>?text=Eu+aceito+seu+pedido+de+namoro%21';
+            link.target = '_blank';
+            link.innerHTML = 'Enviar mensagem no WhatsApp';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         function mudarPosicao() {
